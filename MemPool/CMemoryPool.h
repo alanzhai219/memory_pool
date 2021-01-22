@@ -17,9 +17,11 @@ brief Contains the "CMemoryPool" Class-defintion.
 namespace MemPool
 {
 
-static const std::size_t DEFAULT_MEMORY_POOL_SIZE        = 1000 ;                          //!< Initial MemoryPool size (in Bytes)
-static const std::size_t DEFAULT_MEMORY_CHUNK_SIZE       = 128 ;                           //!< Default MemoryChunkSize (in Bytes)
-static const std::size_t DEFAULT_MEMORY_SIZE_TO_ALLOCATE = DEFAULT_MEMORY_CHUNK_SIZE * 2 ; //!< Default Minimal Memory-Size (in Bytes) to Allocate.
+static const std::size_t DEFAULT_MEMORY_POOL_SIZE        = 1000 ;                          // Initial MemoryPool size (in Bytes)
+
+static const std::size_t DEFAULT_MEMORY_CHUNK_SIZE       = 128 ;                           // Default Memory size per Chunk (in Bytes)
+// At Least, 2 Chunks to allocate
+static const std::size_t DEFAULT_MEMORY_SIZE_TO_ALLOCATE = DEFAULT_MEMORY_CHUNK_SIZE * 2 ; // Default Minimal Memory-Size (in Bytes) to Allocate.
 
 /* class CMemoryPool
  * brief MemoryPool-Class

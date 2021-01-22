@@ -145,11 +145,11 @@ bool CMemoryPool::AllocateMemory(const std::size_t &sMemorySize) {
 
   // Usefull for Debugging : Set the Memory-Content to a defined Value
   if(m_bSetMemoryData) {
-    memset(((void *) ptrNewMemBlock), NEW_ALLOCATED_MEMORY_CONTENT, sBestMemBlockSize) ;
+    memset(((void *) ptrNewMemBlock), NEW_ALLOCATED_MEMORY_CONTENT, sBestMemBlockSize);
   }
 
   // Associate the allocated Memory-Block with the Linked-List of MemoryChunks
-  return LinkChunksToData(ptrNewChunks, uiNeededChunks, ptrNewMemBlock) ; ;
+  return LinkChunksToData(ptrNewChunks, uiNeededChunks, ptrNewMemBlock);
 }
 
 /******************
